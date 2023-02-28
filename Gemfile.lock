@@ -203,6 +203,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.12.4-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.12.4-x86_64-linux)
+      racc (~> 1.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -396,6 +398,7 @@ GEM
 PLATFORMS
   arm64-darwin-20
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   annotate
@@ -431,6 +434,7 @@ DEPENDENCIES
   rails (= 6.0.3)
   rails-controller-testing
   redcarpet (~> 3.5.1)
+  rexml
   rspec-parameterized
   rspec-rails
   rspec-retry
