@@ -51,9 +51,11 @@ class TeamsController < ApplicationController
   def changeOwner
     if @team.owner_id == current_user.id
       if @team.update_attribute('owner_id', @assign.user_id)
+        @user = User.find_by(id: @assign.user_id)
+        ChangeOwnerMailer.change_owner_mail(@user).deliver
         redirect_to @team
       else
-        render
+        render　@team
       end
     end
   end
