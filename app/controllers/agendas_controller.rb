@@ -23,9 +23,7 @@ class AgendasController < ApplicationController
   
   def destroy
     if current_user.id == @agenda.user_id || current_user.id == Team.find(@agenda.team_id).owner_id
-      @article = Article.where(agenda_id: @agenda.id)
       @agenda.destroy
-      @article.destroy
       redirect_to dashboard_url
     else
       
